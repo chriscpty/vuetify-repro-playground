@@ -1,0 +1,27 @@
+{
+  "name": "project-portal",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "setup_cw": "copy .\\environments\\.env.cw .\\environments\\.env.local",
+    "setup_mf": "copy .\\environments\\.env.mf .\\environments\\.env.local"
+  },
+  "dependencies": {
+    "@mdi/font": "5.9.55",
+    "roboto-fontface": "^0.10.0",
+    "vue": "^3.5.12",
+    "vue-router": "^4.5.0",
+    "vuetify": "^3.7.5"
+  },
+  "devDependencies": {
+    "@intlify/vue-i18n-loader": "^5.0.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^5.4.11",
+    "vite-plugin-vuetify": "^2.0.4"
+  }
+}
