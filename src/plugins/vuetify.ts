@@ -6,7 +6,7 @@ import "vuetify/styles"
 import {createVuetify, ThemeDefinition} from "vuetify"
 import {aliases, mdi}                   from "vuetify/iconsets/mdi"
 import {de}                             from "vuetify/locale"
-import {VNumberInput}                   from "vuetify/labs/VNumberInput"
+import DayJsAdapter                     from "@date-io/dayjs"
 
 
 const myCustomLightTheme: ThemeDefinition = {
@@ -21,8 +21,8 @@ const myCustomLightTheme: ThemeDefinition = {
         error: "#B00020",
         info: "#2196F3",
         success: "#4CAF50",
-        warning: "#FB8C00",
-    },
+        warning: "#FB8C00"
+    }
 }
 
 export default createVuetify({
@@ -42,9 +42,10 @@ export default createVuetify({
     locale: {
         locale: "de",
         fallback: "de",
-        messages: { de }
+        messages: {de}
     },
-    components: {
-        VNumberInput
+    date: {
+        adapter: DayJsAdapter,
+        locale: {de: "de"}
     }
 })
